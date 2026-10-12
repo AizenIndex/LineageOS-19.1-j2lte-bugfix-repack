@@ -1,0 +1,56 @@
+From 17ae066df9891823abce37418938192019203810 Mon Sep 17 00:00:00 2001
+From: AizenIndex <abhis@users.noreply.github.com>
+Date: Sun, 11 Oct 2026 23:15:00 +0530
+Subject: [PATCH] ARM: dts: exynos3475-j2lte: set front_sensor_id to 302 (SR200) for rev 2, 3, 4
+
+Fixes front camera crash where hardware rev 4 omitted front_sensor_id,
+defaulting to 303 (Dongbu DB8221A at 0x45) which returned -ENXIO (-6).
+Setting front_sensor_id to 302 enables the correct Siliconfile SR200
+sensor at I2C address 0x20.
+---
+ arch/arm/boot/dts/exynos3475-j2lte_swa_open_02.dts | 4 ++++
+ arch/arm/boot/dts/exynos3475-j2lte_swa_open_03.dts | 4 ++++
+ arch/arm/boot/dts/exynos3475-j2lte_swa_open_04.dts | 4 ++++
+ 3 files changed, 12 insertions(+)
+
+diff --git a/arch/arm/boot/dts/exynos3475-j2lte_swa_open_02.dts b/arch/arm/boot/dts/exynos3475-j2lte_swa_open_02.dts
+index a18cf73c..84855e23 100755
+--- a/arch/arm/boot/dts/exynos3475-j2lte_swa_open_02.dts
++++ b/arch/arm/boot/dts/exynos3475-j2lte_swa_open_02.dts
+@@ -175,4 +175,8 @@
+ 			cm36672p,default_trim = <0>;
+ 		};
+ 	};
++
++	fimc_is@14400000 {
++		front_sensor_id = <302>;
++	};
+ };
+diff --git a/arch/arm/boot/dts/exynos3475-j2lte_swa_open_03.dts b/arch/arm/boot/dts/exynos3475-j2lte_swa_open_03.dts
+index 99255dd9..c0bc0c07 100755
+--- a/arch/arm/boot/dts/exynos3475-j2lte_swa_open_03.dts
++++ b/arch/arm/boot/dts/exynos3475-j2lte_swa_open_03.dts
+@@ -184,4 +184,8 @@
+ 			cm36672p,default_trim = <0>;
+ 		};
+ 	};
++
++	fimc_is@14400000 {
++		front_sensor_id = <302>;
++	};
+ };
+diff --git a/arch/arm/boot/dts/exynos3475-j2lte_swa_open_04.dts b/arch/arm/boot/dts/exynos3475-j2lte_swa_open_04.dts
+index ca8990af..a5501e46 100755
+--- a/arch/arm/boot/dts/exynos3475-j2lte_swa_open_04.dts
++++ b/arch/arm/boot/dts/exynos3475-j2lte_swa_open_04.dts
+@@ -184,4 +184,8 @@
+ 			cm36672p,default_trim = <0>;
+ 		};
+ 	};
++
++	fimc_is@14400000 {
++		front_sensor_id = <302>;
++	};
+ };
+-- 
+2.34.1
