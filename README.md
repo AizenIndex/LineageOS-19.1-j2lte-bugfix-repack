@@ -52,6 +52,18 @@
 
 ---
 
+### 4. Settings Wi-Fi QR Code Scanner & Camera HAL Stabilization
+- **Problem:** Wi-Fi QR code scanning in Settings caused black preview frames, continuous lens autofocus hunting, and intense CPU heat and battery discharge.
+- **Root Cause & Fixes:**
+  - **Color Format Crash:** Added NEON software YUYV -> NV21 conversion fallback in `libcsc.so`.
+  - **Aspect Ratio Distortion:** Patched preview resolution table in `libexynoscameraexternal.so` to 720x720 (1:1 square).
+  - **Focus Motor Hunting:** Throttled hardware autofocus sweep to 3.0-second intervals (`mod 2`) in `camera.universal3475.so`.
+  - **CPU & GC Overload:** Optimized Settings app (`QrCamera`): inserted 50ms decode throttle (reducing CPU usage by >60%), eliminated heap churn in `crop()`, enabled `TRY_HARDER` for dense fiber QR codes, and bypassed scan cache false alarms.
+- **Result:** Fast, smooth 60 FPS preview with cool thermals; scans Wi-Fi QR codes and connects instantly.
+- **Scanning Distance Note:** For optimal recognition, hold the camera at **15 to 20 cm** (more than 10 cm away). The J2 rear lens has a physical minimum focus limit of ~10–12 cm; holding it closer than 10 cm softens the image and cuts off the mandatory QR white border ("Quiet Zone"). At 15–20 cm, it locks on and connects instantly.
+
+---
+
 ## 📥 Downloads
 
 Download the flashable ROM zip directly from the **[GitHub Releases](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/tag/v1.0-bugfix)** page:
