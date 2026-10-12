@@ -5,7 +5,7 @@
 [![Device](https://img.shields.io/badge/Device-Samsung%20Galaxy%20J2%20(SM--J200G)-blue.svg)](#)
 [![Android Version](https://img.shields.io/badge/Android-12.1%20Go%20(LineageOS%2019.1)-green.svg)](#)
 [![Latest Release](https://img.shields.io/badge/Release-v1.0--bugfix-purple.svg?logo=github)](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/tag/v1.0-bugfix)
-[![Download ROM](https://img.shields.io/badge/Download-ROM%20ZIP%20(544%20MB)-brightgreen.svg?logo=android)](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/download/v1.0-bugfix/lineage-19.1-20261012-UNOFFICIAL-j2lte.zip)
+[![Download ROM](https://img.shields.io/badge/Download-ROM%20ZIP%20(564%20MB)-brightgreen.svg?logo=android)](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/download/v1.0-bugfix/lineage-19.1-20261012-UNOFFICIAL-j2lte.zip)
 [![Status](https://img.shields.io/badge/Status-Stable%20%2F%20Tested-brightgreen.svg)](#)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-orange.svg)](https://buymeacoffee.com/aizenindex)
 
