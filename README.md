@@ -70,7 +70,7 @@ Download the flashable ROM zip directly from the **[GitHub Releases](https://git
 
 | File | Size | Direct Download |
 | :--- | :--- | :--- |
-| **`lineage-19.1-20261012-UNOFFICIAL-j2lte.zip`** | 544 MB (570,384,701 bytes) | 🚀 **[Download ROM ZIP](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/download/v1.0-bugfix/lineage-19.1-20261012-UNOFFICIAL-j2lte.zip)** |
+| **`lineage-19.1-20261012-UNOFFICIAL-j2lte.zip`** | 563 MB (590,941,531 bytes) | 🚀 **[Download ROM ZIP](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/download/v1.0-bugfix/lineage-19.1-20261012-UNOFFICIAL-j2lte.zip)** |
 
 - **Release Tag:** [`v1.0-bugfix`](https://github.com/AizenIndex/LineageOS-19.1-j2lte-bugfix-repack/releases/tag/v1.0-bugfix)
 - **Status:** Verified working on physical hardware (SM-J200G rev 4).
